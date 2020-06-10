@@ -1,7 +1,17 @@
-<p>todos works!</p>
-
-
 <table class="table table-striped">
+
+    <tr *ngFor="let todo of todosPreDefined" (click)="onSelect(todo)">
+        <th>{{todo.id}}</th>
+        <th>{{todo.userId}}</th>
+        <th>{{todo.title}}</th>
+        <th>{{todo.completed}}</th>
+    </tr>
+
+
+</table>
+
+<table class="table table-striped" *ngIf="selectedTodo">
+
     <tr>
         <th>TodoId</th>
         <th>UserId</th>
@@ -9,10 +19,11 @@
         <th>Completed</th>
     </tr>
 
-    <tr *ngFor="let todo of todosPreDefined">
-        <th>{{todo.id}}</th>
-        <th>{{todo.userId}}</th>
-        <th>{{todo.title}}</th>
-        <th>{{todo.completed}}</th>
+    <tr>
+        <th>{{selectedTodo.id}}</th>
+        <th>{{selectedTodo.userId}}</th>
+        <th>{{selectedTodo.title}}</th>
+        <th>{{selectedTodo.completed}}</th>
     </tr>
+
 </table>

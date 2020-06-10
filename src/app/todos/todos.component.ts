@@ -11,8 +11,14 @@ export class TodosComponent implements OnInit {
   constructor() { }
 
   todosPreDefined = TODOS;
+  selectedTodo;
 
   ngOnInit(): void {
+  }
+
+  onSelect(todo) {
+    console.log(todo);
+    this.selectedTodo = todo;
   }
 
 
