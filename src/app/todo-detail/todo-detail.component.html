@@ -1,1 +1,16 @@
-<p>todo-detail works!</p>
+<table class="table table-striped" *ngIf="selectedTodo">
+
+    <tr>
+        <th>TodoId</th>
+        <th>UserId</th>
+        <th>Title</th>
+        <th>Completed</th>
+    </tr>
+    <tr>
+        <th>{{selectedTodo.id}}</th>
+        <th>{{selectedTodo.userId}}</th>
+        <th>{{selectedTodo.title}}</th>
+        <th>{{selectedTodo.completed}}</th>
+    </tr>
+
+</table>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo-detail',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TodoDetailComponent implements OnInit {
 
   constructor() { }
+  @Input() selectedTodo: any;
 
   ngOnInit(): void {
   }
