@@ -1,3 +1,9 @@
+<div>
+    <h1>Add Todo</h1>
+    <label>Todo:</label>
+    <input type="text" placeholder="Add Todo" #newtodo>
+    <button class="btn btn-primary" (click)="addTodo(newtodo)"> Add</button>
+</div>
 <table class="table table-striped">
     <tr>
         <th>TodoId</th>
@@ -11,7 +17,11 @@
         <th>{{todo.userId}}</th>
         <th>{{todo.title}}</th>
         <th>{{todo.completed}}</th>
+        <button class="btn btn-primary" (click)="updateTodo(todo)">update</button> 
+        <button class="btn btn-primary" (click)="deleteTodo(todo)"> delete</button> 
     </tr>
 </table>
+
+
 
 <app-todo-detail [selectedTodo]="selectedTodo"></app-todo-detail>
