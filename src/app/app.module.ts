@@ -8,12 +8,14 @@ import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TodoService } from './services/todo.service';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
